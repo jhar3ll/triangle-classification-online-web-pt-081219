@@ -12,7 +12,7 @@ class Triangle
      valid? 
      if side_1 == side_2 && side_2 == side_3
         :equilateral
-     elsif side_1
+     elsif side_1 == side_2 || s
      
      def valid?
      if side_1 || side_2 || side_3 <= 0 
