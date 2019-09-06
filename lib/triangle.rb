@@ -20,18 +20,13 @@ class Triangle
   end 
      
      def valid?
-     if side_1 || side_2 || side_3 <= 0 
-       begin 
-       raise TriangleError
-       rescue TriangleError => error 
-       puts error.message
-     elsif (side_1 + side_2 <= side_3) || (side_1 + side_3 <= side_2) || (side_2 + side_3 <= side_1)
-      begin TriangleError
-       rescue TriangleError => error 
-       puts error.message
-     end 
-   end 
- end 
+    valid_traingle = [(side_1 + side_2 > side_3), (side_2 + side_3 > side_1), (side_1 + side_3 > side_2)]
+    valid_traingle.each do |side|
+      valid_traingle.push(false if side <= 0)
+      raise TriangleError if valid_traingle.include?(false)
+    end 
+  end 
+
    
    class TriangleError < StandardError
      def message
