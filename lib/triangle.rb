@@ -26,6 +26,7 @@ class Triangle
       raise TriangleError if valid_traingle.include?(false)
     end 
   end 
+end 
 
    
    class TriangleError < StandardError
@@ -33,3 +34,4 @@ class Triangle
        "This triangle is invalid!"
      end 
    end 
+ end 
