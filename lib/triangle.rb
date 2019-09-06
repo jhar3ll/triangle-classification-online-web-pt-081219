@@ -11,8 +11,13 @@ class Triangle
    def kind 
      valid? 
      if side_1 == side_2 && side_2 == side_3
-        :equilateral
-     elsif side_1 == side_2 || s
+         return :equilateral
+     elsif side_1 == side_2 || side_2 == side_3 || side_2 == side_3
+      return :isosceles
+    else 
+      return :scalene
+    end 
+  end 
      
      def valid?
      if side_1 || side_2 || side_3 <= 0 
