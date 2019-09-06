@@ -33,4 +33,3 @@ class Triangle
        "This triangle is invalid!"
      end 
    end 
- end 
